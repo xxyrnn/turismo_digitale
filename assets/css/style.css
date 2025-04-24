@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --foreground-color: #c9c9c9;
+    --background-color: #11121a;
+    --highlight-color: lightgreen;
+    --selection-color: aquamarine;
+    --border-radius: 10px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -13,8 +21,8 @@ html {
 }
 
 body {
-    background-color: azure;
-    color: #222;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
     font-family: "Montserrat", sans-serif;
     /* font-family: "Winky Rough", sans-serif; */
     font-optical-sizing: auto;
@@ -25,9 +33,34 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger.open:nth-child(1) {
+    transform: translateX(-9px) rotate(45deg);
+}
+
+.hamburger.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open:nth-child(3) {
+    transform: translateX(-9px) rotate(-45deg);
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--foreground-color);
+    border-radius: var(--border-radius);
+    margin: 5px 0;
+}
+
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--foreground-color);
 }
 
 /* index.html */
@@ -36,47 +69,54 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: 60px;
     display: flex;
     align-items: center;
-    justify-content: right;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 1rem 3rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
 ul {
+    list-style: none;
     display: flex;
     gap: 10px;
 }
 
-li {
-    list-style-type: none;
+li:first-child {
+    margin-right: auto;
 }
 
 .active {
-    background-color: aquamarine;
+    background-color: var(--highlight-color);
+    color: var(--background-color);
 }
 
 ul a {
     font-weight: 500;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 ul a:not(.active):hover {
-    background-color: rgba(0, 255, 255, 0.3);
-    color: #000;
+    background-color: var(--selection-color);
+    color: var(--background-color);
 }
 
 /* responsive design */
 /* tablet */
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     header {
-        padding: 15px;
+        padding: 10px;
+    }
+
+    ul a {
+        padding: 8px 15px;
     }
 }
 
@@ -86,8 +126,15 @@ ul a:not(.active):hover {
         font-size: 1rem;
     }
 
-    header {
-        justify-content: center;
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
     }
 
     ul {
