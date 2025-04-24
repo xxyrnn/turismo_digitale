@@ -49,7 +49,7 @@ header {
     justify-content: space-between;
     padding: 0 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    z-index: 1;
 }
 
 header div {
@@ -58,7 +58,7 @@ header div {
 }
 
 .left a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 800;
 }
 
@@ -118,31 +118,31 @@ li a:not(li.active a):hover {
 }
 
 /* responsive design */
-/* tablet */
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     header {
         padding: 0 0.5rem;
     }
-}
 
-/* mobile */
-@media only screen and (max-width: 600px) {
     .hamburger {
         display: flex;
     }
 
     ul {
-        display: none;
+        background-color: var(--background-color);
         position: absolute;
         top: 60px;
-        left: 0;
-        width: 100%;
+        /* right: -100%; */
+        right: 0;
+        width: 0;
         flex-direction: column;
         justify-content: center;
-        gap: 1px;
+        gap: 0;
+        z-index: 2;
+        padding: 1rem 0;
+        overflow-x: hidden;
     }
 }
