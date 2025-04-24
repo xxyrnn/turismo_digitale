@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: azure;
+    color: #222;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: "Winky Rough", sans-serif; */
+    font-optical-sizing: auto;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    /* letter-spacing: 1px; */
+    -webkit-smooth-font-synthesis: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* index.html */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+ul {
+    display: flex;
+    gap: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.active {
+    background-color: aquamarine;
+}
+
+ul a {
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+ul a:not(.active):hover {
+    background-color: rgba(0, 255, 255, 0.3);
+    color: #000;
+}
+
+/* responsive design */
+/* tablet */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    header {
+        padding: 15px;
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    ul a {
+        padding: 5px 10px;
+    }
+}
