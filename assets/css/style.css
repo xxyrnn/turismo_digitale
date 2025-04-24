@@ -26,44 +26,13 @@ body {
     font-family: "Montserrat", sans-serif;
     /* font-family: "Winky Rough", sans-serif; */
     font-optical-sizing: auto;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.5;
     /* letter-spacing: 1px; */
     -webkit-smooth-font-synthesis: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.hamburger.open:nth-child(1) {
-    transform: translateX(-9px) rotate(45deg);
-}
-
-.hamburger.open:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.open:nth-child(3) {
-    transform: translateX(-9px) rotate(-45deg);
-}
-
-.bar {
-    width: 30px;
-    height: 3px;
-    background-color: var(--foreground-color);
-    border-radius: var(--border-radius);
-    margin: 5px 0;
-}
-
-a {
-    text-decoration: none;
-    color: var(--foreground-color);
-}
-
-/* index.html */
 header {
     position: fixed;
     top: 0;
@@ -73,15 +42,54 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 3rem;
+    padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--foreground-color);
+    border-radius: var(--border-radius);
+}
+
+.hamburger.open > .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open > .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open > .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+a {
+    text-decoration: none;
+    color: var(--foreground-color);
+}
+
+.left a {
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 ul {
     list-style: none;
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 5px;
 }
 
 li:first-child {
@@ -95,7 +103,7 @@ li:first-child {
 
 ul a {
     font-weight: 500;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
 }
 
@@ -127,21 +135,18 @@ ul a:not(.active):hover {
     }
 
     .hamburger {
-        display: block;
+        display: flex;
     }
 
     nav ul {
         display: none;
-        position: fixed;
+        position: absolute;
         top: 60px;
         left: 0;
-    }
-
-    ul {
+        width: 100%;
         flex-direction: column;
-    }
-
-    ul a {
-        padding: 5px 10px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        gap: 5px;
     }
 }
