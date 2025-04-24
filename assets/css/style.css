@@ -33,6 +33,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+    text-decoration: none;
+    color: var(--foreground-color);
+}
+
 header {
     position: fixed;
     top: 0;
@@ -42,9 +47,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+.left a {
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 .hamburger {
@@ -75,16 +90,6 @@ header {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-a {
-    text-decoration: none;
-    color: var(--foreground-color);
-}
-
-.left a {
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
 ul {
     list-style: none;
     display: flex;
@@ -93,29 +98,23 @@ ul {
 }
 
 li {
+    margin: 0.5rem 0;
+}
+
+li a {
+    font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
 }
 
-li.active {
+li.active a {
     background-color: var(--highlight-color);
-
-    & a {
-        color: var(--background-color);
-    }
+    color: var(--background-color);
 }
 
-li:not(.active):hover {
+li a:not(li.active a):hover {
     background-color: var(--selection-color);
-
-    & a {
-        color: var(--background-color);
-    }
-}
-
-ul a {
-    font-weight: 500;
-    width: inherit;
+    color: var(--background-color);
 }
 
 /* responsive design */
@@ -126,29 +125,24 @@ ul a {
     }
 
     header {
-        padding: 10px;
+        padding: 0 0.5rem;
     }
 }
 
 /* mobile */
 @media only screen and (max-width: 600px) {
-    body {
-        font-size: 1rem;
-    }
-
     .hamburger {
         display: flex;
     }
 
-    nav ul {
+    ul {
         display: none;
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
         flex-direction: column;
-        /* align-items: center; */
-        /* justify-content: center; */
-        gap: 5px;
+        justify-content: center;
+        gap: 1px;
     }
 }
