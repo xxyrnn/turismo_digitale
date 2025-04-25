@@ -1,1 +1,3 @@
 # Turismo Digitale
+
+- Create slideshow
