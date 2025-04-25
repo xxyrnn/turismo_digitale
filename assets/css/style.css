@@ -18,17 +18,24 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
-    background: url(../images/sfondo_upscaled.jpg) no-repeat center fixed;
+    background: url(../images/sfondo_upscaled.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--foreground-color);
     font-family: "Montserrat", sans-serif;
     /* font-family: "Winky Rough", sans-serif; */
     font-optical-sizing: auto;
-    font-size: 1vmax;
-    line-height: 1.5;
+    font-size: 1.5rem;
     /* letter-spacing: 1px; */
     -webkit-smooth-font-synthesis: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -39,29 +46,21 @@ a {
     color: var(--foreground-color);
 }
 
+/* header */
 header {
     background-color: var(--background-color);
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     padding: 0 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1;
-}
-
-header div {
-    display: flex;
-    align-items: center;
-}
-
-.left a {
-    font-size: 40px;
-    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
 .hamburger {
@@ -80,73 +79,139 @@ header div {
     border-radius: var(--border-radius);
 }
 
-.hamburger.open > .bar:nth-child(1) {
+.hamburger.open .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
 
-.hamburger.open > .bar:nth-child(2) {
+.hamburger.open .bar:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.open > .bar:nth-child(3) {
+.hamburger.open .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-ul {
-    list-style: none;
+.nav-items {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
 }
 
-li {
-    margin: 0.5rem 0;
-}
-
-li a {
+.nav-items a {
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
 }
 
-li.active a {
+.nav-items #active {
     background-color: var(--highlight-color);
 }
 
-li a:not(li.active a):hover {
+.nav-items a:not(.nav-items #active):hover {
     background-color: var(--selection-color);
     color: var(--foreground-color);
 }
 
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.container {
+    background-color: var(--background-color);
+    width: 75%;
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#mainTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* footer */
+footer {
+    background-color: var(--background-color);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+#logoUtv {
+    width: 300px;
+    height: auto;
+}
+
+footer span {
+    font-size: 1rem;
+}
+
+/* index.html */
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 /* responsive design */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         font-size: 1.1rem;
     }
 
-    header {
-        padding: 0 0.5rem;
-    }
-
-    .left a {
-        font-size: 30px;
-    }
-
+    /* header */
     .hamburger {
         display: flex;
     }
 
-    ul {
+    .nav-items {
         background-color: var(--background-color);
+        flex-direction: column;
         position: absolute;
         top: 70px;
         left: 0;
         width: 100%;
         height: 0;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0;
-        z-index: 2;
         overflow-y: hidden;
+    }
+
+    /* footer */
+    footer img {
+        width: 200px;
+    }
+
+    /* index.html */
+    .gallery {
+        flex-direction: column;
     }
 }

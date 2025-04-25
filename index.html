@@ -7,34 +7,83 @@
         <title>Scopri il Lazio - Home</title>
 
         <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
 
     <body>
         <header>
-            <div class="left">
-                <a href="index.html">Scopri il Lazio</a>
-            </div>
+            <nav>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
 
-            <div class="right">
-                <nav>
-                    <div class="hamburger">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
+                <div class="nav-items">
+                    <a id="active" href="./index.html">Home</a>
+                    <a href="./villages.html">Paesi</a>
+                    <a href="./itinerary.html">Itinerario</a>
+                    <a href="./team.html">Team</a>
+                    <a href="./feedback.html">Feedback</a>
+                    <a href="./help.html">Supporto</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1 id="mainTitle">Scopri il Lazio</h1>
+
+                <div class="villages">
+                    <div class="village-card">
+                        <h2>Vivi Fiuggi</h2>
+                        <p>Conosciuta per le sue acque terapeutiche e i suoi splendidi parchi</p>
+                        <button><a href="./villages/fiuggi.html">Scopri di pi&#249;</a></button>
                     </div>
 
-                    <ul>
-                        <li class="nav-item active"><a href="index.html">Home</a></li>
-                        <li class="nav-item"><a href="villages.html">Villages</a></li>
-                        <li class="nav-item"><a href="itinerary.html">Itinerary</a></li>
-                        <li class="nav-item"><a href="team.html">Team</a></li>
-                        <li class="nav-item"><a href="feedback.html">Feedback</a></li>
-                        <li class="nav-item"><a href="help.html">Help</a></li>
-                    </ul>
-                </nav>
+                    <div class="village-card">
+                        <h2>Esplora Paliano</h2>
+                        <p>Un villaggio affascinante con una ricca storia e viste mozzafiato</p>
+                        <button><a href="./villages/paliano.html">Scopri di pi&#249;</a></button>
+                    </div>
+
+                    <div class="village-card">
+                        <h2>Visita Segni</h2>
+                        <p>Famosa per i suoi siti storici e i suoi splendidi paesaggi</p>
+                        <button><a href="./villages/segni.html">Scopri di pi&#249;</a></button>
+                    </div>
+
+                    <div class="village-card">
+                        <h2>Sperimenta Montecompatri</h2>
+                        <p>Un borgo pittoresco con una cultura vivace</p>
+                        <button><a href="./villages/montecompatri.html">Scopri di pi&#249;</a></button>
+                    </div>
+
+                    <div class="village-card">
+                        <h2>Scopri Genazzano</h2>
+                        <p>Noto per la sua splendida architettura e le viste panoramiche</p>
+                        <button><a href="./villages/genazzano.html">Scopri di pi&#249;</a></button>
+                    </div>
+                </div>
             </div>
-        </header>
+
+            <div class="container">
+                <h1>Galleria</h1>
+
+                <div class="gallery">
+                    <img src="./assets/images/fiuggi/fiuggi.webp" alt="fiuggi" />
+                    <img src="./assets/images/paliano/paliano.jpg" alt="paliano" />
+                    <img src="./assets/images/segni/segni.webp" alt="segni" />
+                    <img src="./assets/images/montecompatri/montecompatri.jpg" alt="montecompatri" />
+                    <img src="./assets/images/genazzano/genazzano.jpg" alt="genazzano" />
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <img id="logoUtv" src="./assets/images/tor_vergata.png" alt="logo_tor_vergata" />
+            <span>&copy; Corso di Turismo Digitale 2025</span>
+        </footer>
 
         <script src="assets/js/app.js"></script>
     </body>
