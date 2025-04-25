@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --foreground-color: #c9c9c9;
-    --background-color: #11121a;
-    --highlight-color: lightgreen;
-    --selection-color: aquamarine;
+    --background-color: #fff;
+    --foreground-color: #11121a;
+    --highlight-color: #d6e865;
+    --selection-color: rgb(241, 203, 167);
     --border-radius: 10px;
 }
 
@@ -21,12 +21,13 @@ html {
 }
 
 body {
-    background-color: var(--background-color);
+    background: url(../images/sfondo_upscaled.jpg) no-repeat center fixed;
+    background-size: cover;
     color: var(--foreground-color);
     font-family: "Montserrat", sans-serif;
     /* font-family: "Winky Rough", sans-serif; */
     font-optical-sizing: auto;
-    font-size: 1.3rem;
+    font-size: 1vmax;
     line-height: 1.5;
     /* letter-spacing: 1px; */
     -webkit-smooth-font-synthesis: antialiased;
@@ -39,11 +40,12 @@ a {
 }
 
 header {
+    background-color: var(--background-color);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,7 +60,7 @@ header div {
 }
 
 .left a {
-    font-size: 2rem;
+    font-size: 40px;
     font-weight: 800;
 }
 
@@ -109,12 +111,11 @@ li a {
 
 li.active a {
     background-color: var(--highlight-color);
-    color: var(--background-color);
 }
 
 li a:not(li.active a):hover {
     background-color: var(--selection-color);
-    color: var(--background-color);
+    color: var(--foreground-color);
 }
 
 /* responsive design */
@@ -127,6 +128,10 @@ li a:not(li.active a):hover {
         padding: 0 0.5rem;
     }
 
+    .left a {
+        font-size: 30px;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -134,15 +139,14 @@ li a:not(li.active a):hover {
     ul {
         background-color: var(--background-color);
         position: absolute;
-        top: 60px;
-        /* right: -100%; */
-        right: 0;
-        width: 0;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 0;
         flex-direction: column;
         justify-content: center;
         gap: 0;
         z-index: 2;
-        padding: 1rem 0;
-        overflow-x: hidden;
+        overflow-y: hidden;
     }
 }
