@@ -8,6 +8,7 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/slides.css" />
     </head>
 
     <body>
@@ -70,12 +71,19 @@
             <div class="container">
                 <h1>Galleria</h1>
 
-                <div class="gallery">
-                    <img src="./assets/images/fiuggi/fiuggi.webp" alt="fiuggi" />
-                    <img src="./assets/images/paliano/paliano.jpg" alt="paliano" />
-                    <img src="./assets/images/segni/segni.webp" alt="segni" />
-                    <img src="./assets/images/montecompatri/montecompatri.jpg" alt="montecompatri" />
-                    <img src="./assets/images/genazzano/genazzano.jpg" alt="genazzano" />
+                <div class="slide-container">
+                    <div class="slides">
+                        <img class="active" src="./assets/images/fiuggi/fiuggi.webp" alt="fiuggi" />
+                        <img src="./assets/images/paliano/paliano.jpg" alt="paliano" />
+                        <img src="./assets/images/segni/segni.webp" alt="segni" />
+                        <img src="./assets/images/montecompatri/montecompatri.jpg" alt="montecompatri" />
+                        <img src="./assets/images/genazzano/genazzano.jpg" alt="genazzano" />
+                    </div>
+
+                    <div class="buttons">
+                        <span id="prev">&#10094;</span>
+                        <span id="next">&#10095;</span>
+                    </div>
                 </div>
             </div>
         </main>
