@@ -2,4 +2,6 @@
 
 - Add animation to `.container`
 - Add submenu to `Paesi`
-- Create slideshow
+- Add points to slideshow
+- Make slides switch automatically
+- Add text on slides
