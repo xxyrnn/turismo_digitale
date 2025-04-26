@@ -8,13 +8,13 @@ hamburger.addEventListener("click", () => {
 
 // slideshow
 const nextSlide = document.querySelector("#next");
-const prevSlide = document.querySelector("#prev");
 nextSlide.addEventListener("click", () => {
     const currentSlide = document.querySelector(".slides img.active");
     const next = currentSlide.nextElementSibling || document.querySelector(".slides img:first-child");
     currentSlide.classList.remove("active");
     next.classList.add("active");
 });
+const prevSlide = document.querySelector("#prev");
 prevSlide.addEventListener("click", () => {
     const currentSlide = document.querySelector(".slides.active");
     const prev = currentSlide.previousElementSibling || document.querySelector(".slides img:last-child");
