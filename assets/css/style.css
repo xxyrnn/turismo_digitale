@@ -158,6 +158,8 @@ footer {
     justify-content: center;
     gap: 10px;
     padding: 1rem;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
     box-shadow: var(--shadow);
     margin: 0 auto;
 }
@@ -173,7 +175,27 @@ footer span {
 
 /* index.html */
 /* villages */
-.village-card button {
+.villages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.village-card {
+    width: calc(33% - 1rem);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 1rem 0;
+    border-radius: var(--border-radius);
+    /* box-shadow: var(--shadow); */
+}
+
+.village-card a {
     cursor: pointer;
     background-color: var(--highlight-color);
     font-family: inherit;
@@ -185,25 +207,20 @@ footer span {
     border-radius: var(--border-radius);
 }
 
-.village-card button:hover {
+.village-card a:hover {
     background-color: var(--selection-color);
 }
 
 /* slideshow */
 .slideshow {
-    background-color: var(--highlight-color);
+    background-color: var(--background-color);
     position: relative;
     width: 50%;
     height: 400px;
-    border: 3px solid var(--highlight-color);
+    border: 3px solid var(--background-color);
+    border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     margin: 0 auto;
-}
-
-
-.slideshow:hover {
-    background-color: var(--selection-color);
-    border-color: var(--selection-color);
 }
 
 .slides {
@@ -218,9 +235,7 @@ footer span {
     height: 100%;
     position: absolute;
     object-fit: cover;
-}
-
-.slides img {
+    border-radius: var(--border-radius);
     opacity: 0;
 }
 
@@ -233,14 +248,15 @@ footer span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    /* gap: 1rem; */
+    padding: 0 0.5rem;
     z-index: 1;
 }
 
 .slideshow-controls span {
     cursor: pointer;
     color: rgba(17, 18, 26, 0.8);
-    font-size: 1.7rem;
+    font-size: 2rem;
     border-radius: 50%;
     box-shadow: var(--shadow);
 }
@@ -267,8 +283,8 @@ footer span {
 .dot {
     background-color: rgba(17, 18, 26, 0.8);
     cursor: pointer;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border: 3px solid transparent;
     border-radius: 50%;
     box-shadow: var(--shadow);
@@ -279,7 +295,7 @@ footer span {
 }
 
 .dot.active {
-    background-color: inherit;
+    background-color: var(--highlight-color);
     border-color: var(--foreground-color);
 }
 
@@ -291,6 +307,7 @@ footer span {
 
     body {
         font-size: var(--font-size);
+        text-align: center;
     }
 
     /* header */
@@ -315,12 +332,31 @@ footer span {
     }
 
     /* index.html */
-    .village-card button {
+    .village-card {
+        width: 100%;
+    }
+
+    .village-card a {
         font-size: var(--font-size);
         padding: 0.5rem;
     }
 
     .slideshow {
         width: 100%;
+        text-align: left;
+    }
+
+    .slideshow-controls {
+        justify-content: center;
+    }
+
+    .slideshow-controls span {
+        display: none;
+        /* font-size: 1.7rem; */
+    }
+
+    .dot {
+        width: 18px;
+        height: 18px;
     }
 }
