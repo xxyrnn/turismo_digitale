@@ -7,8 +7,8 @@ hamburger.addEventListener("click", () => {
 });
 
 // slideshow
-const nextSlide = document.querySelector("#next");
-nextSlide.addEventListener("click", () => {
+// next slide
+function slideToNext() {
     const currentSlide = document.querySelector(".slides .active");
     const currentDot = document.querySelector(".dots-container .active");
     const nextSlide = currentSlide.nextElementSibling || document.querySelector(".slides img:first-child");
@@ -17,9 +17,13 @@ nextSlide.addEventListener("click", () => {
     currentSlide.classList.remove("active");
     nextSlide.classList.add("active");
     nextDot.classList.add("active");
-});
-const prevSlide = document.querySelector("#prev");
-prevSlide.addEventListener("click", () => {
+}
+
+const next = document.querySelector("#next");
+next.addEventListener("click", slideToNext);
+// prev slide
+const prev = document.querySelector("#prev");
+prev.addEventListener("click", () => {
     const currentSlide = document.querySelector(".slides .active");
     const currentDot = document.querySelector(".dots-container .active");
     const prevSlide = currentSlide.previousElementSibling || document.querySelector(".slides img:last-child");
@@ -28,4 +32,29 @@ prevSlide.addEventListener("click", () => {
     currentDot.classList.remove("active");
     prevSlide.classList.add("active");
     prevDot.classList.add("active");
+});
+// auto slide
+let slideInterval = setInterval(slideToNext, 5000);
+// stop auto slide on hover
+const slideshow = document.querySelector(".slideshow");
+slideshow.addEventListener("mouseover", () => {
+    clearInterval(slideInterval);
+});
+// start auto slide on mouseout
+slideshow.addEventListener("mouseout", () => {
+    slideInterval = setInterval(slideToNext, 5000);
+});
+// dots
+const dots = document.querySelectorAll(".dot");
+dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+        const currentSlide = document.querySelector(".slides .active");
+        const currentDot = document.querySelector(".dots-container .active");
+        const index = Array.from(dots).indexOf(dot);
+        const targetSlide = document.querySelectorAll(".slides img")[index];
+        currentSlide.classList.remove("active");
+        currentDot.classList.remove("active");
+        targetSlide.classList.add("active");
+        dot.classList.add("active");
+    });
 });
