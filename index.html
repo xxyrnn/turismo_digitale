@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -73,15 +73,32 @@
 
                 <div class="slideshow">
                     <div class="slides">
-                        <img class="active" src="./assets/images/fiuggi/fiuggi.webp" alt="fiuggi" />
-                        <img src="./assets/images/paliano/paliano.jpg" alt="paliano" />
-                        <img src="./assets/images/segni/segni.webp" alt="segni" />
-                        <img src="./assets/images/montecompatri/montecompatri.jpg" alt="montecompatri" />
-                        <img src="./assets/images/genazzano/genazzano.jpg" alt="genazzano" />
+                        <div class="slide active">
+                            <h2>Fiuggi</h2>
+                            <img src="./assets/images/fiuggi/fiuggi.webp" alt="fiuggi" />
+                        </div>
+                        <div class="slide">
+                            <h2>Paliano</h2>
+                            <img src="./assets/images/paliano/paliano.jpg" alt="paliano" />
+                        </div>
+                        <div class="slide">
+                            <h2>Segni</h2>
+                            <img src="./assets/images/segni/segni.webp" alt="segni" />
+                        </div>
+                        <div class="slide">
+                            <h2>Montecompatri</h2>
+                            <img src="./assets/images/montecompatri/montecompatri.jpg" alt="montecompatri" />
+                        </div>
+                        <div class="slide">
+                            <h2>Genazzano</h2>
+                            <img src="./assets/images/genazzano/genazzano.jpg" alt="genazzano" />
+                        </div>
                     </div>
 
                     <div class="slideshow-controls">
-                        <span id="prev" class="fa-solid fa-circle-chevron-left"></span>
+                        <div class="arrow">
+                            <span id="prev" class="fa-solid fa-circle-chevron-left"></span>
+                        </div>
 
                         <div class="dots-container">
                             <div class="dot active"></div>
@@ -91,7 +108,9 @@
                             <div class="dot"></div>
                         </div>
 
-                        <span id="next" class="fa-solid fa-circle-chevron-right"></span>
+                        <div class="arrow">
+                            <span id="next" class="fa-solid fa-circle-chevron-right"></span>
+                        </div>
                     </div>
                 </div>
             </div>

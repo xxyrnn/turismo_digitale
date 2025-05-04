@@ -11,10 +11,10 @@ hamburger.addEventListener("click", () => {
 function slideToNext() {
     const currentSlide = document.querySelector(".slides .active");
     const currentDot = document.querySelector(".dots-container .active");
-    const nextSlide = currentSlide.nextElementSibling || document.querySelector(".slides img:first-child");
+    const nextSlide = currentSlide.nextElementSibling || document.querySelector(".slides .slide:first-child");
     const nextDot = currentDot.nextElementSibling || document.querySelector(".dot:first-child");
-    currentDot.classList.remove("active");
     currentSlide.classList.remove("active");
+    currentDot.classList.remove("active");
     nextSlide.classList.add("active");
     nextDot.classList.add("active");
 }
@@ -26,7 +26,7 @@ const prev = document.querySelector("#prev");
 prev.addEventListener("click", () => {
     const currentSlide = document.querySelector(".slides .active");
     const currentDot = document.querySelector(".dots-container .active");
-    const prevSlide = currentSlide.previousElementSibling || document.querySelector(".slides img:last-child");
+    const prevSlide = currentSlide.previousElementSibling || document.querySelector(".slides .slide:last-child");
     const prevDot = currentDot.previousElementSibling || document.querySelector(".dot:last-child");
     currentSlide.classList.remove("active");
     currentDot.classList.remove("active");
@@ -51,7 +51,7 @@ dots.forEach((dot) => {
         const currentSlide = document.querySelector(".slides .active");
         const currentDot = document.querySelector(".dots-container .active");
         const index = Array.from(dots).indexOf(dot);
-        const targetSlide = document.querySelectorAll(".slides img")[index];
+        const targetSlide = document.querySelectorAll(".slides .slide")[index];
         currentSlide.classList.remove("active");
         currentDot.classList.remove("active");
         targetSlide.classList.add("active");
