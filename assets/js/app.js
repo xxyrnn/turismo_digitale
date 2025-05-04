@@ -19,10 +19,10 @@ function slideToNext() {
     nextDot.classList.add("active");
 }
 
-const next = document.querySelector("#next");
+const next = document.querySelector(".arrow #next");
 next.addEventListener("click", slideToNext);
 // prev slide
-const prev = document.querySelector("#prev");
+const prev = document.querySelector(".arrow #prev");
 prev.addEventListener("click", () => {
     const currentSlide = document.querySelector(".slides .active");
     const currentDot = document.querySelector(".dots-container .active");
@@ -57,4 +57,13 @@ dots.forEach((dot) => {
         targetSlide.classList.add("active");
         dot.classList.add("active");
     });
+});
+
+// dropdown menu
+const villagesBtn = document.getElementById("villages");
+const dropdown = document.querySelector(".dropdown");
+const villagesSpan = document.querySelector("#villages span");
+villagesBtn.addEventListener("click", () => {
+    dropdown.classList.toggle("show");
+    villagesSpan.style.transform = dropdown.classList.contains("show") ? "rotate(180deg)" : "rotate(0deg)";
 });

@@ -100,6 +100,32 @@ header {
     gap: 5px;
 }
 
+#villages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.dropdown {
+    background-color: var(--background-color);
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    padding-left: 1rem;
+}
+
+.dropdown.show {
+    height: 100%;
+}
+
 .nav-items a {
     font-weight: 500;
     padding: 0.5rem 1rem;
