@@ -6,6 +6,15 @@ hamburger.addEventListener("click", () => {
     navMenu.style.height = hamburger.classList.contains("open") ? "calc(100vh - 70px)" : "0";
 });
 
+// dropdown menu
+const villagesBtn = document.getElementById("villages");
+const dropdown = document.querySelector(".dropdown");
+const villagesSpan = document.querySelector("#villages span");
+villagesBtn.addEventListener("click", () => {
+    dropdown.classList.toggle("show");
+    villagesSpan.style.transform = dropdown.classList.contains("show") ? "rotate(180deg)" : "rotate(0deg)";
+});
+
 // slideshow
 // next slide
 function slideToNext() {
@@ -57,13 +66,4 @@ dots.forEach((dot) => {
         targetSlide.classList.add("active");
         dot.classList.add("active");
     });
-});
-
-// dropdown menu
-const villagesBtn = document.getElementById("villages");
-const dropdown = document.querySelector(".dropdown");
-const villagesSpan = document.querySelector("#villages span");
-villagesBtn.addEventListener("click", () => {
-    dropdown.classList.toggle("show");
-    villagesSpan.style.transform = dropdown.classList.contains("show") ? "rotate(180deg)" : "rotate(0deg)";
 });
