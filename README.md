@@ -1,3 +1,3 @@
 # Turismo Digitale
 
-- Add animation to `.container`
+- Edit `.slideshow` graphics
