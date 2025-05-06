@@ -433,7 +433,7 @@ footer span {
         justify-content: center;
     }
 
-    .slideshow-controls .arrow {
+    .slideshow-controls span {
         display: none;
     }
 
