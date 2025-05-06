@@ -28,10 +28,10 @@ function slideToNext() {
     nextDot.classList.add("active");
 }
 
-const next = document.querySelector(".arrow #next");
+const next = document.querySelector(".slideshow-controls #next");
 next.addEventListener("click", slideToNext);
 // prev slide
-const prev = document.querySelector(".arrow #prev");
+const prev = document.querySelector(".slideshow-controls #prev");
 prev.addEventListener("click", () => {
     const currentSlide = document.querySelector(".slides .active");
     const currentDot = document.querySelector(".dots-container .active");
