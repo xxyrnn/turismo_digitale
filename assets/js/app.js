@@ -14,6 +14,13 @@ villagesBtn.addEventListener("click", () => {
     dropdown.classList.toggle("show");
     villagesSpan.style.transform = dropdown.classList.contains("show") ? "rotate(180deg)" : "rotate(0deg)";
 });
+// close dropdown on click outside
+document.addEventListener("click", (event) => {
+    if (!villagesBtn.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.classList.remove("show");
+        villagesSpan.style.transform = "rotate(0deg)";
+    }
+});
 
 // slideshow
 // next slide
