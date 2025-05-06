@@ -409,17 +409,48 @@ footer span {
         overflow-y: hidden;
     }
 
+    /* @keyframes appear {
+        from {
+            height: 0;
+        }
+        to {
+            height: 13rem;
+        }
+    }
+
+    @keyframes disappear {
+        from {
+            display: flex;
+            height: 13rem;
+        }
+        to {
+            display: none;
+            height: 0;
+        }
+    } */
+
     .dropdown {
         flex-direction: column;
-        position: sticky;
-        padding: 0;
+        position: initial;
+        display: none;
+        /* height: 0; */
         border-radius: var(--border-radius);
         box-shadow: var(--shadow);
+        /* animation: disappear 0.3s ease-in-out; */
     }
 
     .dropdown.show {
+        display: flex;
         height: auto;
-        padding: 1rem;
+        /* animation: appear 0.3s ease-in-out; */
+    }
+
+    .dropdown a:first-child {
+        margin-top: 1rem;
+    }
+
+    .dropdown a:last-child {
+        margin-bottom: 1rem;
     }
 
     /* footer */

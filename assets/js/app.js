@@ -10,17 +10,16 @@ hamburger.addEventListener("click", () => {
 const villagesBtn = document.getElementById("villages");
 const dropdown = document.querySelector(".dropdown");
 const villagesSpan = document.querySelector("#villages span");
+const navItems = document.querySelectorAll(".nav-items a:not(#villages):not(.dropdown a)");
 villagesBtn.addEventListener("click", () => {
     dropdown.classList.toggle("show");
     villagesBtn.classList.toggle("open");
-    villagesSpan.style.transform = dropdown.classList.contains("show") ? "rotate(180deg)" : "rotate(0deg)";
 });
 // close dropdown on click outside
 document.addEventListener("click", (event) => {
     if (!villagesBtn.contains(event.target) && !dropdown.contains(event.target)) {
         dropdown.classList.remove("show");
         villagesBtn.classList.remove("open");
-        villagesSpan.style.transform = "rotate(0deg)";
     }
 });
 
