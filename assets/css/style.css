@@ -6,7 +6,7 @@
     --foreground-color: #11121a;
     --highlight-color: #d6e865;
     --selection-color: #f1cba7;
-    --font-size: 1.5em;
+    --font-size: 1.5rem;
     --border-radius: 10px;
     --shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
