@@ -215,7 +215,7 @@ footer span {
 .villages {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
     gap: 1rem;
 }
@@ -227,8 +227,7 @@ footer span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
-    padding: 1rem 0;
+    gap: 10px;
     /* border-radius: var(--border-radius); */
     /* box-shadow: var(--shadow); */
 }
@@ -243,6 +242,7 @@ footer span {
     outline: none;
     border: none;
     border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
 .village-card a:hover {
