@@ -79,7 +79,7 @@
             <div class="container">
                 <h1>Galleria</h1>
 
-                <div class="slideshow">
+                <div class="slideshow" onmouseover="clearInterval(slideInterval)">
                     <div class="slides">
                         <div class="slide active">
                             <h2>Fiuggi</h2>
@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="slideshow-controls">
-                        <span id="prev" class="fa-solid fa-circle-chevron-left"></span>
+                        <span id="prev" class="fa-solid fa-circle-chevron-left" onclick="slideToPrev()"></span>
 
                         <div class="dots-container">
                             <div class="dot active"></div>
@@ -114,7 +114,7 @@
                             <div class="dot"></div>
                         </div>
 
-                        <span id="next" class="fa-solid fa-circle-chevron-right"></span>
+                        <span id="next" class="fa-solid fa-circle-chevron-right" onclick="slideToNext()"></span>
                     </div>
                 </div>
             </div>
