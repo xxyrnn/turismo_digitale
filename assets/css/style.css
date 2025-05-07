@@ -394,7 +394,84 @@ footer span {
 #famImg {
     width: 50%;
     height: auto;
+    display: block;
     border-radius: var(--border-radius);
+    margin: 1rem auto 0;
+    box-shadow: var(--shadow);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2px;
+}
+
+label {
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+input {
+    font-family: inherit;
+    font-size: var(--font-size);
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 0.5rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=date] {
+    width: 100%;
+}
+
+/* WebKit-based browsers */
+input[type=number]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type=number] {
+    appearance: textfield;
+}
+
+.input-field:last-of-type {
+    align-items: center;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    background-color: var(--highlight-color);
+    font-weight: 500;
+    width: 10rem;
+}
+
+input[type=submit]:hover {
+    background-color: var(--selection-color);
+}
+
+.error {
+    color: red;
+}
+
+#errorMsg {
+    color: red;
+    text-align: center;
+    opacity: 0;
+}
+
+.note {
+    text-align: left !important;
 }
 
 /* responsive design */
@@ -468,6 +545,11 @@ footer span {
         margin-bottom: 1rem;
     }
 
+    /* main */
+    .container p {
+        text-align: center;
+    }
+
     /* footer */
     footer img {
         width: 200px;
@@ -497,5 +579,18 @@ footer span {
     .dot {
         width: 18px;
         height: 18px;
+    }
+
+    /* itinerary.html */
+    #famImg {
+        width: 100%;
+    }
+
+    .input-field {
+        align-items: center;
+    }
+
+    input[type=submit] {
+        width: 100%;
     }
 }

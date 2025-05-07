@@ -43,14 +43,101 @@
             <div class="container">
                 <h1 class="main-title">Fai questo viaggio con noi</h1>
 
-                <p>
-                    Il nostro tour è pensato principalmente per famiglie con o senza bambini, ma anche per tutti coloro che desiderano
-                    trascorrere le proprie giornate alla scoperta della natura, della cultura e della storia di questa regione. Gli
-                    itinerari che abbiamo scelto sono brevi ma ricchi e piacevoli. Possiamo affermare con certezza che soddisferanno le
-                    vostre esigenze.
-                </p>
+                <div class="intro">
+                    <p>
+                        Il nostro tour è pensato principalmente per famiglie con o senza bambini, ma anche per tutti coloro che desiderano
+                        trascorrere le proprie giornate alla scoperta della natura, della cultura e della storia di questa regione. Gli
+                        itinerari che abbiamo scelto sono brevi ma ricchi e piacevoli. Possiamo affermare con certezza che soddisferanno le
+                        vostre esigenze.
+                    </p>
 
-                <img id="famImg" src="./assets/images/itinerario/fam.pjpeg" alt="family_itinerary" />
+                    <img id="famImg" src="./assets/images/itinerario/fam.pjpeg" alt="family_itinerary" />
+                </div>
+            </div>
+
+            <div class="container">
+                <h1>Il percorso</h1>
+
+                <div class="itinerary">
+                    <div class="day-card">
+                        <h2>Giorno 1</h2>
+                        <p>
+                            Naturalistic exploration itinerary. Visit to the waterfalls of Castel Giuliano, Caldara di Manziana, Bosco di Betulle
+                            Bianche and Bosco Macchia grande.
+                        </p>
+                    </div>
+
+                    <div class="day-card">
+                        <h2>Giorno 2</h2>
+                        <p>Historical-cultural exploration itinerary. Visit of the most important points of interest in Viterbo.</p>
+                    </div>
+
+                    <div class="day-card">
+                        <h2>Giorno 3</h2>
+                        <p>
+                            Historical-cultural exploration itinerary. Visit to the historic center of Montefiascone and the municipality of
+                            Bagnoregio.
+                        </p>
+                    </div>
+
+                    <div class="day-card">
+                        <h2>Giorno 4</h2>
+                        <p>
+                            Historical-archaeological exploration itinerary. Visit to the Museum of Civita and the Necropolis of Pianezze,
+                            Centocamere and the Tufo crucifix.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h1>Prenota il tuo viaggio</h1>
+
+                <form action="#">
+                    <p>Compila il modulo sottostante per prenotare il tuo viaggio. Ti contatteremo al pi&#249; presto per confermare la tua prenotazione.</p>
+
+                    <div class="input-field">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name" autocomplete="on" required />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="surname">Cognome</label>
+                        <input type="text" name="surname" id="surname" autocomplete="on" required />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" autocomplete="on" required />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="address">Indirizzo</label>
+                        <input type="text" name="address" id="address" autocomplete="on" required />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="adults">Adulti</label>
+                        <input type="number" inputmode="numeric" name="adults" id="adults" min="1" max="20" autocomplete="off" required />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="kids">Bambini*</label>
+                        <input type="number" inputmode="numeric" name="kids" id="kids" min="0" max="20" autocomplete="off" />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="date">Data</label>
+                        <input type="date" name="date" id="date" autocomplete="off" required />
+                    </div>
+
+                    <div class="input-field">
+                        <input type="submit" value="Invia" />
+                    </div>
+
+                    <p id="errorMsg">Riempi tutti i campi obbligatori!</p>
+                    <p class="note">* fino a 18 anni</p>
+                </form>
             </div>
         </main>
 
