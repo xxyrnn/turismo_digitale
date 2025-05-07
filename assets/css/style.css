@@ -198,6 +198,10 @@ h1 {
     font-style: italic;
 }
 
+.container p {
+    text-align: justify;
+}
+
 /* footer */
 footer {
     display: flex;
@@ -245,6 +249,10 @@ footer span {
     gap: 10px;
     /* border-radius: var(--border-radius); */
     /* box-shadow: var(--shadow); */
+}
+
+.village-card p {
+    text-align: center;
 }
 
 .village-card a {
@@ -380,6 +388,13 @@ footer span {
 .dot.active {
     background-color: var(--highlight-color);
     border-color: var(--foreground-color);
+}
+
+/* itinerary.html */
+#famImg {
+    width: 50%;
+    height: auto;
+    border-radius: var(--border-radius);
 }
 
 /* responsive design */
