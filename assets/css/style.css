@@ -230,7 +230,7 @@ footer span {
 }
 
 /** index.html **/
-/* villages */
+/* card paesi */
 .villages {
     display: flex;
     flex-wrap: wrap;
@@ -400,6 +400,7 @@ footer span {
     box-shadow: var(--shadow);
 }
 
+/* itinerario */
 .itinerary {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -407,13 +408,29 @@ footer span {
 }
 
 .day-card {
-    /* empty */
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
-.day-card h2 {
+.day-card iframe {
+    width: 100%;
+    height: 400px;
+    display: block;
+    border: none;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.day-desc {
+    padding: 1rem;
+}
+
+.day-desc h2 {
     text-align: center;
 }
 
+/* form prenotazione */
 form {
     display: flex;
     flex-direction: column;
@@ -428,9 +445,22 @@ form {
     gap: 2px;
 }
 
+.short-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.short-inputs .input-field {
+    width: 33%;
+}
+
+.input-field:not(.short-inputs .input-field):last-of-type {
+    align-items: center;
+}
+
 label {
     font-weight: 500;
-    margin-right: 1rem;
 }
 
 input {
@@ -443,10 +473,7 @@ input {
     padding: 0.5rem;
 }
 
-input[type=text],
-input[type=email],
-input[type=number],
-input[type=date] {
+input:not([type=submit]) {
     width: 100%;
 }
 
@@ -456,10 +483,6 @@ input[type=number]::-webkit-inner-spin-button { /* WebKit-based browsers */
 
 input[type=number] {
     appearance: textfield;
-}
-
-.input-field:last-of-type {
-    align-items: center;
 }
 
 input[type=submit] {
