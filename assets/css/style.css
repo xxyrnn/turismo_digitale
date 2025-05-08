@@ -48,7 +48,7 @@ a {
     color: var(--foreground-color);
 }
 
-/* header */
+/** header **/
 header {
     background-color: var(--background-color);
     position: sticky;
@@ -159,7 +159,7 @@ header {
     color: var(--foreground-color);
 }
 
-/* main */
+/** main **/
 /* .container animation */
 @keyframes fadeIn {
     from {
@@ -202,7 +202,7 @@ h1 {
     text-align: justify;
 }
 
-/* footer */
+/** footer **/
 footer {
     display: flex;
     flex-direction: column;
@@ -229,7 +229,7 @@ footer span {
     font-size: 1rem;
 }
 
-/* index.html */
+/** index.html **/
 /* villages */
 .villages {
     display: flex;
@@ -390,7 +390,7 @@ footer span {
     border-color: var(--foreground-color);
 }
 
-/* itinerary.html */
+/** itinerary.html **/
 #famImg {
     width: 50%;
     height: auto;
@@ -398,6 +398,20 @@ footer span {
     border-radius: var(--border-radius);
     margin: 1rem auto 0;
     box-shadow: var(--shadow);
+}
+
+.itinerary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.day-card {
+    /* empty */
+}
+
+.day-card h2 {
+    text-align: center;
 }
 
 form {
@@ -436,8 +450,7 @@ input[type=date] {
     width: 100%;
 }
 
-/* WebKit-based browsers */
-input[type=number]::-webkit-inner-spin-button {
+input[type=number]::-webkit-inner-spin-button { /* WebKit-based browsers */
     display: none;
 }
 
@@ -474,7 +487,7 @@ input[type=submit]:hover {
     text-align: left !important;
 }
 
-/* responsive design */
+/** responsive design **/
 @media screen and (max-width: 768px) {
     :root {
         --font-size: 1.1rem;
