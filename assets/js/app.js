@@ -1,11 +1,9 @@
 /* hamburger */
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-items");
-const header = document.querySelector("header");
+const navMenu = document.querySelector("nav");
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
-    navMenu.style.height = hamburger.classList.contains("open") ? "calc(100vh - 70px)" : "0";
-    header.style.opacity = "0";
+    navMenu.style.height = hamburger.classList.contains("open") ? "100vh" : "0";
 });
 
 /* dropdown menu */
@@ -16,12 +14,24 @@ const navItems = document.querySelectorAll(".nav-items a:not(#villages):not(.dro
 villagesBtn.addEventListener("click", () => {
     dropdown.classList.toggle("show");
     villagesBtn.classList.toggle("open");
+    hamburger.style.opacity = "0";
+    hamburger.style.pointerEvents = "none";
 });
-// close dropdown on click outside
+// close dropdown on arrow click
+const returnBtn = document.getElementById("returnBtn");
+returnBtn.addEventListener("click", () => {
+    dropdown.classList.remove("show");
+    villagesBtn.classList.remove("open");
+    hamburger.style.opacity = "1";
+    hamburger.style.pointerEvents = "initial";
+});
+// close dropdown when clicking outside
 document.addEventListener("click", (event) => {
     if (!villagesBtn.contains(event.target) && !dropdown.contains(event.target)) {
         dropdown.classList.remove("show");
         villagesBtn.classList.remove("open");
+        hamburger.style.opacity = "1";
+        hamburger.style.pointerEvents = "initial";
     }
 });
 
