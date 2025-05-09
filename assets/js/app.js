@@ -1,9 +1,11 @@
 /* hamburger */
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-items");
+const header = document.querySelector("header");
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
     navMenu.style.height = hamburger.classList.contains("open") ? "calc(100vh - 70px)" : "0";
+    header.style.opacity = "0";
 });
 
 /* dropdown menu */

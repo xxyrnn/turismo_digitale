@@ -105,6 +105,7 @@ header {
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
+    text-wrap: nowrap;
 }
 
 .nav-items .active {
@@ -139,24 +140,39 @@ header {
 }
 
 .dropdown {
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px) contrast(1.3);
-    height: 0;
+    background-color: var(--background-color);
+    /* background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px) contrast(1.3); */
+    /* height: 0; */
+    opacity: 0;
     position: absolute;
-    top: 70px;
-    left: 0;
-    overflow-x: hidden;
+    top: 80px; /* 70px; */
+    left: 2.5%;
+    transform: translateX(-2.5%);
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: left;
+    /* justify-content: left; */
     gap: 5px;
-    padding: 0 1rem;
-    /* border-top-right-radius: var(--border-radius); */
-    border-bottom-right-radius: var(--border-radius);
+    padding: 1rem;
+    /* border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius); */
+    border-radius: var(--border-radius);
+}
+
+#returnBtn {
+    font-size: var(--font-size);
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .dropdown.show {
-    height: 100%;
+    /* height: 100%; */
+    opacity: 1;
+    /* top: 80px; */
 }
 
 /** main **/
@@ -537,40 +553,27 @@ input[type=submit]:hover {
         overflow-y: hidden;
     }
 
-    /* @keyframes appear {
-        from {
-            height: 0;
-        }
-        to {
-            height: 13rem;
-        }
+    .dropdown {
+        /* opacity: 0; */
+        flex-direction: column;
+        justify-content: center;
+        top: -70px;
+        overflow: auto;
+        width: 0;
+        height: 100vh;
+        /* height: calc(100vh - 70px); */
+        padding: 0;
+        border-radius: 0;
+        box-shadow: var(--shadow);
     }
 
-    @keyframes disappear {
-        from {
-            display: flex;
-            height: 13rem;
-        }
-        to {
-            display: none;
-            height: 0;
-        }
-    } */
-
-    .dropdown {
-        flex-direction: column;
-        position: initial;
-        display: none;
-        /* height: 0; */
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow);
-        /* animation: disappear 0.3s ease-in-out; */
+    #returnBtn {
+        display: block;
     }
 
     .dropdown.show {
-        display: flex;
-        height: auto;
-        /* animation: appear 0.3s ease-in-out; */
+        /* opacity: 1; */
+        width: 100%;
     }
 
     .dropdown a:first-child {
