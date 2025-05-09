@@ -1,3 +1,3 @@
 # Turismo Digitale
 
-- solve issues with `iframe` and `.short-inputs`
+- solve issues with `.short-inputs` on mobile

@@ -427,15 +427,22 @@ footer span {
     box-shadow: var(--shadow);
 }
 
+#scrollToRead {
+    display: none;
+}
+
 /* itinerario */
 .itinerary {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
 }
 
 .day-card {
     background-color: var(--background-color);
+    width: calc(50% - 0.5rem);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
@@ -543,7 +550,7 @@ input[type=submit]:hover {
         text-align: center;
     }
 
-    /* header */
+    /** header **/
     .hamburger {
         display: flex;
     }
@@ -602,17 +609,17 @@ input[type=submit]:hover {
         margin-bottom: 1rem;
     }
 
-    /* main */
+    /** main **/
     .container p {
         text-align: center;
     }
 
-    /* footer */
+    /** footer **/
     footer img {
         width: 200px;
     }
 
-    /* index.html */
+    /** index.html **/
     .village-card {
         width: 100%;
     }
@@ -638,9 +645,27 @@ input[type=submit]:hover {
         height: 18px;
     }
 
-    /* itinerary.html */
+    /** itinerary.html **/
     #famImg {
         width: 100%;
+    }
+
+    #scrollToRead {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .itinerary {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        border-radius: var(--border-radius);
+    }
+
+    .day-card {
+        flex-shrink: 0;
+        width: 100%;
+        scroll-snap-align: start;
     }
 
     .input-field {
