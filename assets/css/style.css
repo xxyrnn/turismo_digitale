@@ -563,13 +563,22 @@ input[type=submit]:hover {
         font-size: 1.4rem;
     }
 
+    #villages::after {
+        content: "\f105";
+    }
+
+    #villages.open::after {
+        transform: none;
+    }
+
     .dropdown {
         flex-direction: column;
         justify-content: center;
         width: 0;
         height: 100%;
         top: 0;
-        left: 0;
+        left: unset;
+        right: 0;
         overflow-x: hidden;
         padding: 0;
         border-radius: 0;

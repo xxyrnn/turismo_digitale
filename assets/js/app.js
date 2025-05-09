@@ -9,29 +9,26 @@ hamburger.addEventListener("click", () => {
 /* dropdown menu */
 const villagesBtn = document.getElementById("villages");
 const dropdown = document.querySelector(".dropdown");
-const villagesSpan = document.querySelector("#villages span");
-const navItems = document.querySelectorAll(".nav-items a:not(#villages):not(.dropdown a)");
 villagesBtn.addEventListener("click", () => {
-    dropdown.classList.toggle("show");
     villagesBtn.classList.toggle("open");
+    dropdown.classList.toggle("show");
     hamburger.style.opacity = "0";
     hamburger.style.pointerEvents = "none";
 });
-// close dropdown on arrow click
-const returnBtn = document.getElementById("returnBtn");
-returnBtn.addEventListener("click", () => {
-    dropdown.classList.remove("show");
+// close dropdown...
+function closeDropdown() {
     villagesBtn.classList.remove("open");
+    dropdown.classList.remove("show");
     hamburger.style.opacity = "1";
     hamburger.style.pointerEvents = "initial";
-});
-// close dropdown when clicking outside
+}
+// ...on arrow click
+const returnBtn = document.getElementById("returnBtn");
+returnBtn.addEventListener("click", closeDropdown);
+// ...when clicking outside
 document.addEventListener("click", (event) => {
     if (!villagesBtn.contains(event.target) && !dropdown.contains(event.target)) {
-        dropdown.classList.remove("show");
-        villagesBtn.classList.remove("open");
-        hamburger.style.opacity = "1";
-        hamburger.style.pointerEvents = "initial";
+        closeDropdown();
     }
 });
 
