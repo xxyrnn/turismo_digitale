@@ -1,3 +1,4 @@
 # Turismo Digitale
 
-- edit mobile `.dropdown`
+- change `#villages` arrow icon on mobile
+- solve issues with `iframe` and `.short-inputs`
