@@ -100,6 +100,22 @@ header {
     gap: 5px;
 }
 
+.nav-items a {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.nav-items .active {
+    background-color: var(--highlight-color);
+}
+
+.nav-items a:not(.nav-items .active):hover {
+    background-color: var(--selection-color);
+    color: var(--foreground-color);
+}
+
 #villages {
     display: flex;
     align-items: center;
@@ -129,34 +145,18 @@ header {
     position: absolute;
     top: 70px;
     left: 0;
-    overflow-y: hidden;
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: left;
     gap: 5px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 1rem;
     /* border-top-right-radius: var(--border-radius); */
     border-bottom-right-radius: var(--border-radius);
 }
 
 .dropdown.show {
     height: 100%;
-}
-
-.nav-items a {
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-}
-
-.nav-items .active {
-    background-color: var(--highlight-color);
-}
-
-.nav-items a:not(.nav-items .active):hover {
-    background-color: var(--selection-color);
-    color: var(--foreground-color);
 }
 
 /** main **/
