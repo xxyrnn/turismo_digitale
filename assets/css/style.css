@@ -420,7 +420,7 @@ footer span {
     border-color: var(--foreground-color);
 }
 
-/** itinerary.html **/
+/** itinerario.html **/
 #famImg {
     width: 50%;
     height: auto;
@@ -544,6 +544,39 @@ input[type=submit]:hover {
     text-align: left !important;
 }
 
+/** team.html **/
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+}
+
+.membro-team {
+    background-color: var(--background-color);
+    width: calc(33% - 5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.membro-team img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    /* border-top-left-radius: var(--border-radius); */
+    /* border-top-right-radius: var(--border-radius); */
+}
+
+.desc-membro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /** responsive design **/
 @media screen and (max-width: 768px) {
     :root {
@@ -649,7 +682,7 @@ input[type=submit]:hover {
         height: 18px;
     }
 
-    /** itinerary.html **/
+    /** itinerario.html **/
     #famImg {
         width: 100%;
     }
@@ -697,5 +730,11 @@ input[type=submit]:hover {
 
     input[type=submit] {
         width: 100%;
+    }
+
+    /** team.html **/
+    .membro-team {
+        width: 100%;
+        flex-direction: column;
     }
 }
