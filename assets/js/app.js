@@ -27,9 +27,8 @@ const returnBtn = document.getElementById("returnBtn");
 returnBtn.addEventListener("click", closeDropdown);
 // ...when clicking outside
 document.addEventListener("click", (event) => {
-    if (!villagesBtn.contains(event.target) && !dropdown.contains(event.target)) {
+    if (!villagesBtn.contains(event.target) && !dropdown.contains(event.target))
         closeDropdown();
-    }
 });
 
 /* slideshow */
@@ -56,14 +55,15 @@ function slideToPrev() {
     prevDot.classList.add("active");
 }
 
-if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+const slideshow = document.querySelector(".slideshow");
+
+if (slideshow !== null) {
     // auto slide
     let slideInterval = setInterval(slideToNext, 5000);
+    // stop auto slide on mouseover
+    slideshow.addEventListener("mouseover", clearInterval(slideInterval));
     // restart auto slide on mouseout
-    const slideshow = document.querySelector(".slideshow");
-    slideshow.addEventListener("mouseout", () => {
-        slideInterval = setInterval(slideToNext, 5000);
-    });
+    slideshow.addEventListener("mouseout", () => slideInterval = setInterval(slideToNext, 5000));
     // dots
     const dots = document.querySelectorAll(".dot");
     dots.forEach((dot) => {
@@ -81,21 +81,25 @@ if (window.location.pathname === "/" || window.location.pathname === "/index.htm
 }
 
 /* form */
-const inputFields = document.querySelectorAll("form input:not(#kids)");
-const errorMessage = document.getElementById("errorMsg");
-let errorInputs = new Set();
-inputFields.forEach((input) => {
-    input.addEventListener("blur", () => {
-        if (input.value.trim() === "") {
-            input.previousElementSibling.classList.add("error");
-            errorMessage.style.opacity = "1";
-            errorInputs.add(input);
-        } else {
-            errorInputs.delete(input);
-            input.previousElementSibling.classList.remove("error");
+const inputFields = document.querySelectorAll("form input:not(#bambini)");
+const msgErrore = document.getElementById("msgErrore");
 
-            if (errorInputs.size === 0)
-                errorMessage.style.opacity = "0";
-        }
+if (inputFields !== null) {
+    let inputErrati = new Set();
+
+    inputFields.forEach((input) => {
+        input.addEventListener("blur", () => {
+            if (input.value.trim() === "") {
+                input.previousElementSibling.classList.add("error");
+                msgErrore.style.opacity = "1";
+                inputErrati.add(input);
+            } else {
+                inputErrati.delete(input);
+                input.previousElementSibling.classList.remove("error");
+
+                if (inputErrati.size === 0)
+                    msgErrore.style.opacity = "0";
+            }
+        });
     });
-});
+}
