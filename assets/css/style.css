@@ -429,6 +429,7 @@ footer span {
 
 #scrollToRead {
     display: none;
+    margin-bottom: 1rem;
 }
 
 /* itinerario */
@@ -652,7 +653,6 @@ input[type=submit]:hover {
 
     #scrollToRead {
         display: block;
-        margin-bottom: 1rem;
     }
 
     .itinerary {
@@ -670,6 +670,20 @@ input[type=submit]:hover {
 
     .input-field {
         align-items: center;
+    }
+
+    .short-inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .short-inputs .input-field {
+        width: calc(50% - 5px);
+    }
+
+    .short-inputs .input-field:last-child {
+        width: 100%;
     }
 
     input[type=submit] {
