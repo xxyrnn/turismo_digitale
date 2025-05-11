@@ -7,27 +7,27 @@ hamburger.addEventListener("click", () => {
 });
 
 /* dropdown menu */
-const villagesBtn = document.getElementById("villages");
+const paesi = document.getElementById("paesi");
 const dropdown = document.querySelector(".dropdown");
-villagesBtn.addEventListener("click", () => {
-    villagesBtn.classList.toggle("open");
+paesi.addEventListener("click", () => {
+    paesi.classList.toggle("open");
     dropdown.classList.toggle("show");
     hamburger.style.opacity = "0";
     hamburger.style.pointerEvents = "none";
 });
 // close dropdown...
 function closeDropdown() {
-    villagesBtn.classList.remove("open");
+    paesi.classList.remove("open");
     dropdown.classList.remove("show");
     hamburger.style.opacity = "1";
     hamburger.style.pointerEvents = "initial";
 }
 // ...on arrow click
-const returnBtn = document.getElementById("returnBtn");
-returnBtn.addEventListener("click", closeDropdown);
+const freccia = document.getElementById("freccia");
+freccia.addEventListener("click", closeDropdown);
 // ...when clicking outside
 document.addEventListener("click", (event) => {
-    if (!villagesBtn.contains(event.target) && !dropdown.contains(event.target))
+    if (!paesi.contains(event.target) && !dropdown.contains(event.target))
         closeDropdown();
 });
 
@@ -91,14 +91,17 @@ if (inputFields !== null) {
         input.addEventListener("blur", () => {
             if (input.value.trim() === "") {
                 input.previousElementSibling.classList.add("error");
-                msgErrore.style.opacity = "1";
+                // msgErrore.style.opacity = "1";
+                msgErrore.style.display = "block";
                 inputErrati.add(input);
             } else {
                 inputErrati.delete(input);
                 input.previousElementSibling.classList.remove("error");
 
-                if (inputErrati.size === 0)
-                    msgErrore.style.opacity = "0";
+                if (inputErrati.size === 0) {
+                    // msgErrore.style.opacity = "0";
+                    msgErrore.style.display = "none";
+                }
             }
         });
     });

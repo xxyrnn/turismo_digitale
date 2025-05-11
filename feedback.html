@@ -24,6 +24,8 @@
                 <a href="./index.html">Home</a>
                 <a id="paesi">Paesi</a>
                 <div class="dropdown">
+                    <span id="freccia" class="fa-solid fa-arrow-left fa-2xl"></span>
+
                     <a href="./paesi/fiuggi.html">Fiuggi</a>
                     <a href="./paesi/paliano.html">Paliano</a>
                     <a href="./paesi/segni.html">Segni</a>
@@ -37,7 +39,34 @@
             </nav>
         </header>
 
-        <main></main>
+        <main>
+            <div class="container">
+                <h1>Lasciaci il tuo feedback</h1>
+
+                <form action="#">
+                    <div class="input-field">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" autocomplete="on" required />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" autocomplete="on" required />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="feedback">Feedback</label>
+                        <textarea name="feedback" id="feedback" rows="5" required></textarea>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="submit" value="Invia" />
+                    </div>
+
+                    <p id="msgErrore">Riempi tutti i campi obbligatori!</p>
+                </form>
+            </div>
+        </main>
 
         <footer>
             <a href="https://web.uniroma2.it/" target="_blank" rel="noopener noreferrer">
