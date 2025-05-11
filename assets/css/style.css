@@ -494,6 +494,7 @@ form {
 }
 
 label {
+    cursor: text;
     font-weight: 500;
 }
 

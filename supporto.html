@@ -42,6 +42,31 @@
         <main>
             <div class="container">
                 <h1 class="titolo-pagina">Hai bisogno di aiuto?</h1>
+
+                <form action="#">
+                    <p>Compila questo form con la tua richiesta e ti risponderemo il prima possibile.</p>
+
+                    <div class="input-field">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" autocomplete="on" required />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" autocomplete="on" required />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="richiesta">Richiesta</label>
+                        <textarea name="richiesta" id="richiesta" rows="5" autocomplete="off" required></textarea>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="submit" value="Invia" />
+                    </div>
+
+                    <p id="msgErrore">Riempi tutti i campi obbligatori!</p>
+                </form>
             </div>
         </main>
 
