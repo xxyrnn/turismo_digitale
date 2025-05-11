@@ -81,7 +81,7 @@ if (slideshow !== null) {
 }
 
 /* form */
-const inputFields = document.querySelectorAll("form input:not(#bambini)");
+const inputFields = document.querySelectorAll("form input:not(#bambini), textarea");
 const msgErrore = document.getElementById("msgErrore");
 
 if (inputFields !== null) {
