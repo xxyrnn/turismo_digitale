@@ -262,7 +262,7 @@ footer span {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    justify-content: stretch;
+    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -547,7 +547,7 @@ input[type=submit]:hover {
 }
 
 /** team.html **/
-.team-container {
+.cards {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
@@ -555,9 +555,9 @@ input[type=submit]:hover {
     gap: 10px;
 }
 
-.membro-team {
+.card {
     background-color: var(--background-color);
-    width: calc(33% - 5px);
+    width: calc(33% - 10px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -566,17 +566,29 @@ input[type=submit]:hover {
     box-shadow: var(--shadow);
 }
 
-.membro-team img {
+.card img {
+    aspect-ratio: 5/3;
     width: 100%;
-    border-radius: var(--border-radius);
-    /* border-top-left-radius: var(--border-radius); */
-    /* border-top-right-radius: var(--border-radius); */
+    margin-bottom: 1rem;
 }
 
-.desc-membro {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.membro-team img {
+    aspect-ratio: 1/1 !important;
+    border-radius: var(--border-radius);
+}
+
+.desc-card {
+    margin: auto 0;
+}
+
+.desc-card a {
+    background-color: var(--highlight-color);
+    padding: 0 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.desc-card a:hover {
+    background-color: var(--selection-color);
 }
 
 /** feedback.html **/
@@ -590,6 +602,41 @@ textarea {
     border: 0;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+}
+
+/** paesi **/
+/** paliano.html **/
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info div {
+    width: 50%;
+}
+
+.geo span {
+    font-weight: 500;
+}
+
+.geo a {
+    background-color: var(--highlight-color);
+    padding: 0 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.geo a:hover {
+    background-color: var(--selection-color);
+}
+
+.weatherwidget-io {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.weatherwidget-io.small {
+    display: none !important;
 }
 
 /** responsive design **/
@@ -751,5 +798,39 @@ textarea {
     .membro-team {
         width: 100%;
         flex-direction: column;
+    }
+
+    /** paesi **/
+    /** paliano.html **/
+    .cards {
+        flex-wrap: nowrap;
+        justify-content: unset;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        border-radius: var(--border-radius);
+    }
+
+    .card {
+        width: 100%;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        box-shadow: none;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .info div {
+        width: 100%;
+    }
+
+    .weatherwidget-io.full {
+        display: none !important;
+    }
+
+    .weatherwidget-io.small {
+        display: block !important;
     }
 }

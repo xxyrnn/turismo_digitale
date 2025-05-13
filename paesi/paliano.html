@@ -48,6 +48,110 @@
                     storico e per le sue tradizioni culinarie.
                 </p>
             </div>
+
+            <div class="container">
+                <p id="scorri">Scorri per scoprire gli altri luoghi!</p>
+
+                <div class="cards galleria-paese">
+                    <div class="card luogo">
+                        <img src="../assets/images/paliano/palazzo_colonna.jpg" alt="palazzo_colonna" />
+                    
+                        <div class="desc-card">
+                            <h2>Palazzo Colonna</h2>
+                            <p>
+                                Storico edificio nobiliare situato nel centro del paese, rappresenta un importante esempio di
+                                architettura rinascimentale.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card luogo">
+                        <img src="../assets/images/paliano/chiesa.jpg" alt="chiesa" />
+                    
+                        <div class="desc-card">
+                            <h2>Chiesa di Sant'Andrea Apostolo</h2>
+                            <p>
+                                Chiesa principale del borgo, risalente al XII secolo, con interni barocchi e opere d'arte
+                                sacra.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card luogo">
+                        <img src="../assets/images/paliano/selva.jpg" alt="selva" />
+                    
+                        <div class="desc-card">
+                            <h2>Selva di Paliano e Mola dei Piscoli</h2>
+                            <p>Area protetta di oltre 400 ettari, ideale per escursioni e attività all'aperto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h1>Informazioni sulla citt&#224;</h1>
+
+                <div class="info">
+                    <div class="geo">
+                        <p><span>Provincia:</span> Frosinone</p>
+                        <p><span>Area comunale:</span> 70 km<sup>2</sup></p>
+                        <p><span>Popolazione:</span> 7.000 abitanti</p>
+                        <p><span>Patrono:</span> Sant'Andrea Apostolo</p>
+                        <a href="https://www.comune.paliano.fr.it/home.html">Sito Web</a>
+                    </div>
+
+                    <div class="meteo">
+                        <a class="weatherwidget-io full" href="https://forecast7.com/it/41d8013d06/paliano/" data-label_1="PALIANO" data-label_2="METEO" data-font="Open Sans" data-icons="Climacons" data-theme="orange" data-basecolor="#f1cba7" data-textcolor="#11121a" data-cloudfill="#f1cba7">PALIANO METEO</a>
+                        <a class="weatherwidget-io small" href="https://forecast7.com/it/41d8013d06/paliano/" data-label_1="PALIANO" data-label_2="METEO" data-font="Open Sans" data-icons="Climacons" data-mode="Current" data-theme="orange" data-basecolor="#f1cba7" data-textcolor="#11121a" data-cloudfill="#f1cba7">PALIANO METEO</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h1>Ristoranti</h1>
+
+                <div class="cards ristoranti">
+                    <div class="card ristorante">
+                        <img src="../assets/images/paliano/ristorante1.jpg" alt="locanda_degli_angeli" />
+
+                        <div class="desc-card">
+                            <h2>Locanda degli Angeli</h2>
+                            <p>Via Limiti Carnevali, 10/c</p>
+                            <p>+39 338 266 4396</p>
+                            <a href="https://www.locandadegliangeli.it">Sito Web</a>
+                        </div>
+                    </div>
+
+                    <div class="card ristorante">
+                        <img src="../assets/images/paliano/ristorante2.jpg" alt="antico_granaio" />
+
+                        <div class="desc-card">
+                            <h2>L'Antico Granaio</h2>
+                            <p>Via Palianese Sud</p>
+                            <p>+39 351 387 7949</p>
+                            <a href="https://linktr.ee/anticogranaio">Sito Web</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h1>Hotel</h1>
+
+                <div class="cards hotels">
+                    <div class="card hotel">
+                        <img src="../assets/images/paliano/hotel.jpg" alt="donna_vittori" />
+
+                        <div class="desc-card">
+                            <h2>Donna Vittori - Borgo Agricolo</h2>
+                            <p><span class="fa-solid fa-star"></span> 9.5/10</p>
+                            <p>Via Cimate, 73</p>
+                            <p>+39 392 229 4083</p>
+                            <a href="https://www.donnavittori.com">Sito Web</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
@@ -59,5 +163,17 @@
         </footer>
 
         <script src="../assets/js/app.js"></script>
+        <script>
+            !function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://weatherwidget.io/js/widget.min.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "weatherwidget-io-js");
+        </script>
     </body>
 </html>

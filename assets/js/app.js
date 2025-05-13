@@ -61,7 +61,7 @@ if (slideshow !== null) {
     // auto slide
     let slideInterval = setInterval(slideToNext, 5000);
     // stop auto slide on mouseover
-    slideshow.addEventListener("mouseover", clearInterval(slideInterval));
+    slideshow.addEventListener("mouseover", () => clearInterval(slideInterval));
     // restart auto slide on mouseout
     slideshow.addEventListener("mouseout", () => slideInterval = setInterval(slideToNext, 5000));
     // dots
