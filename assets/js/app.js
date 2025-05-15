@@ -106,3 +106,22 @@ if (inputFields !== null) {
         });
     });
 }
+
+/* accordion */
+const headers = document.querySelectorAll(".accordion-header");
+
+if (headers !== null) {
+    headers.forEach(header => {
+        header.addEventListener("click", () => {
+            const item = header.parentElement;
+            const isActive = item.classList.contains("active");
+
+            // close all items
+            document.querySelectorAll(".accordion-item").forEach(i => i.classList.remove("active"));
+
+            // toggle current item
+            if (!isActive)
+                item.classList.add("active");
+        });
+    });
+}
