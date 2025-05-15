@@ -1,3 +1,3 @@
 # Turismo Digitale
 
-- change `footer` graphics
+- change graphics of `footer`
