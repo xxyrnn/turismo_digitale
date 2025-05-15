@@ -101,8 +101,8 @@
                     </div>
 
                     <div class="meteo">
-                        <a class="weatherwidget-io full" href="https://forecast7.com/it/41d8013d06/paliano/" data-label_1="PALIANO" data-label_2="METEO" data-font="Open Sans" data-icons="Climacons" data-theme="orange" data-basecolor="#f1cba7" data-textcolor="#11121a" data-cloudfill="#f1cba7">PALIANO METEO</a>
-                        <a class="weatherwidget-io small" href="https://forecast7.com/it/41d8013d06/paliano/" data-label_1="PALIANO" data-label_2="METEO" data-font="Open Sans" data-icons="Climacons" data-mode="Current" data-theme="orange" data-basecolor="#f1cba7" data-textcolor="#11121a" data-cloudfill="#f1cba7">PALIANO METEO</a>
+                        <a class="weatherwidget-io full" href="https://forecast7.com/it/41d8013d06/paliano/" data-label_1="PALIANO" data-label_2="METEO" data-font="Open Sans" data-icons="Climacons" data-days="5" data-theme="orange" data-basecolor="#f1cba7" data-textcolor="#11121a" data-mooncolor="#11121a" data-cloudcolor="#11121a" data-cloudfill="#f1cba7" data-snowcolor="#11121a">PALIANO METEO</a>
+                        <a class="weatherwidget-io small" href="https://forecast7.com/it/41d8013d06/paliano/" data-label_1="PALIANO" data-label_2="METEO" data-font="Open Sans" data-icons="Climacons" data-mode="Current" data-theme="orange" data-basecolor="#f1cba7" data-textcolor="#11121a" data-mooncolor="#11121a" data-cloudcolor="#11121a" data-cloudfill="#f1cba7" data-snowcolor="#11121a">PALIANO METEO</a>
                     </div>
                 </div>
             </div>
@@ -152,6 +152,64 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                <h1>Mappa interattiva</h1>
+
+                <div class="mappa-paese">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23797.58585432846!2d13.039004026755073!3d41.79171673450823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1325626d987d75ef%3A0x38ff317652f74722!2s03018%20Paliano%20FR!5e0!3m2!1sit!2sit!4v1747305311034!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="container">
+                <h1>Come raggiungere Paliano</h1>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>In aereo</h3>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Per raggiungere Paliano in aereo, puoi fare riferimento ai seguenti aeroporti:</p>
+                            <p>
+                                <span>Aeroporto di Roma Ciampino (CIA):</span> servito principalmente da compagnie aeree low-cost, si trova a circa
+                                50 km da Paliano. Da qui puoi noleggiare un'auto o prendere un treno.
+                            </p>
+                            <p>
+                                <span>Aeroporto di Roma Fiumicino (FCO):</span> il principale aeroporto internazionale di Roma, situato a circa 70 km
+                                da Paliano. Da qui puoi noleggiare un'auto o prendere il treno <i>Leonardo Express</i> fino alla stazione di Roma Termini
+                                e poi un autobus <i>COTRAL</i> per Paliano.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>In treno</h3>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                La stazione ferroviaria pi&#249; vicina a Paliano &#232; quella di Anagni-Fiuggi, situata a circa 10 km da Paliano. Questa
+                                stazione &#232; servita da treni regionali sulla linea Roma-Cassino-Napoli. Dalla stazione di Anagni-Fiuggi, puoi prendere
+                                un autobus locale per raggiungere Paliano.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>In autobus</h3>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Paliano &#232; ben collegata in autobus con Roma e altre citt&#224; vicine. Gli autobus <i>COTRAL</i> forniscono collegamenti
+                                frequenti da e per Roma, con diverse partenze giornaliere. La principale fermata degli autobus a Roma è la stazione Termini.
+                                Da qui, puoi prendere direttamente un autobus <i>COTRAL</i> per Paliano.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
@@ -164,16 +222,16 @@
 
         <script src="../assets/js/app.js"></script>
         <script>
-            !function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
+            !function(s, id) {
+                var js, fjs = document.getElementsByTagName(s)[0];
                 
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
+                if (!document.getElementById(id)) {
+                    js = document.createElement(s);
                     js.id = id;
                     js.src = "https://weatherwidget.io/js/widget.min.js";
                     fjs.parentNode.insertBefore(js, fjs);
                 }
-            }(document, "script", "weatherwidget-io-js");
+            }("script", "weatherwidget-io-js");
         </script>
     </body>
 </html>

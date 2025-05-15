@@ -39,6 +39,7 @@ body {
     font-optical-sizing: auto;
     font-size: var(--font-size);
     /* letter-spacing: 1px; */
+    line-height: 1.5;
     -webkit-smooth-font-synthesis: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -557,10 +558,11 @@ input[type=submit]:hover {
 
 .card {
     background-color: var(--background-color);
-    width: calc(33% - 10px);
+    width: calc(33% - 3px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1rem;
     padding: 1rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -569,7 +571,6 @@ input[type=submit]:hover {
 .card img {
     aspect-ratio: 5/3;
     width: 100%;
-    margin-bottom: 1rem;
 }
 
 .membro-team img {
@@ -605,15 +606,19 @@ textarea {
 }
 
 /** paesi **/
-/** paliano.html **/
 .info {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .info div {
-    width: 50%;
+    width: 45%;
+}
+
+.geo,
+.geo p {
+    text-align: center;
 }
 
 .geo span {
@@ -637,6 +642,75 @@ textarea {
 
 .weatherwidget-io.small {
     display: none !important;
+}
+
+.hotel {
+    width: 100%;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.hotel img {
+    width: 33%;
+}
+
+.mappa-paese iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.accordion {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.accordion-item {
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--foreground-color);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    cursor: pointer;
+    background-color: var(--highlight-color);
+    /* font-weight: 600; */
+    padding: 15px 20px;
+}
+
+.accordion-header:hover {
+    background-color: var(--selection-color);
+}
+
+.accordion-content {
+    background-color: var(--background-color);
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+}
+
+.accordion-content span {
+    font-weight: 500;
+}
+
+.accordion-item.active {
+    border-color: transparent;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 400px;
+    padding: 15px 20px;
 }
 
 /** responsive design **/
