@@ -63,7 +63,6 @@ header {
     padding: 0 1rem;
     box-shadow: var(--shadow);
     z-index: 1;
-    margin-bottom: 2rem;
 }
 
 .hamburger {
@@ -188,7 +187,11 @@ nav a:not(nav .active):hover {
 }
 
 /** main **/
-/* .container animation */
+main {
+    margin: 2rem 0;
+}
+
+/* animazione .container */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -200,8 +203,7 @@ nav a:not(nav .active):hover {
     }
 }
 
-.container,
-footer {
+.container {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px) contrast(1.3);
     width: 75%;
@@ -231,7 +233,7 @@ h1 {
 }
 
 /** footer **/
-footer {
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,7 +245,7 @@ footer {
     box-shadow: var(--shadow);
 }
 
-footer a {
+.footer a {
     display: block;
     line-height: 0;
 }
@@ -654,6 +656,10 @@ textarea {
     width: 33%;
 }
 
+.mappa-paese {
+    line-height: 0;
+}
+
 .mappa-paese iframe {
     width: 100%;
     height: 500px;
@@ -671,7 +677,7 @@ textarea {
 
 .accordion-item {
     background-color: var(--background-color);
-    border-bottom: 2px solid var(--foreground-color);
+    border-bottom: 2px solid #ddd;
 }
 
 .accordion-item:last-child {
@@ -680,13 +686,17 @@ textarea {
 
 .accordion-header {
     cursor: pointer;
-    background-color: var(--highlight-color);
+    background-color: #eee;
     font-weight: 600;
     padding: 15px 20px;
 }
 
 .accordion-header:hover {
     background-color: var(--selection-color);
+}
+
+.accordion-item.active .accordion-header {
+    background-color: var(--highlight-color);
 }
 
 .accordion-content {
@@ -696,21 +706,17 @@ textarea {
     padding: 0 20px;
 }
 
+.accordion-item.active .accordion-content {
+    max-height: 400px;
+    padding: 15px 20px;
+}
+
 .accordion-content p {
     margin: 15px 0;
 }
 
 .accordion-content span {
     font-weight: 500;
-}
-
-.accordion-item.active {
-    border-color: transparent;
-}
-
-.accordion-item.active .accordion-content {
-    max-height: 400px;
-    padding: 15px 20px;
 }
 
 /** responsive design **/
