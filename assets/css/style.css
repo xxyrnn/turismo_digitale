@@ -681,7 +681,7 @@ textarea {
 .accordion-header {
     cursor: pointer;
     background-color: var(--highlight-color);
-    /* font-weight: 600; */
+    font-weight: 600;
     padding: 15px 20px;
 }
 
