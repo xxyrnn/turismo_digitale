@@ -31,6 +31,13 @@ document.addEventListener("click", (event) => {
         closeDropdown();
 });
 
+/* links */
+const links = document.querySelectorAll("a");
+links.forEach(link => {
+    if (link.getAttribute("href") === "#")
+        link.style.pointerEvents = "none";
+});
+
 /* slideshow */
 // next slide
 function slideToNext() {
