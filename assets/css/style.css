@@ -50,7 +50,7 @@ a {
 }
 
 /** header **/
-header {
+.header {
     background-color: var(--background-color);
     position: sticky;
     top: 0;
@@ -59,6 +59,7 @@ header {
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: center;
     justify-content: left;
     padding: 0 1rem;
     box-shadow: var(--shadow);
@@ -146,8 +147,6 @@ nav a:not(nav .active):hover {
 
 .dropdown {
     background-color: var(--background-color);
-    /* background-color: rgba(255, 255, 255, 0.5); */
-    /* backdrop-filter: blur(10px) contrast(1.3); */
     height: 0;
     position: absolute;
     top: 70px;
@@ -187,7 +186,7 @@ nav a:not(nav .active):hover {
 }
 
 /** main **/
-main {
+.main {
     margin: 2rem 0;
 }
 
