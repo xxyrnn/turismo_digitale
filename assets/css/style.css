@@ -640,6 +640,10 @@ textarea {
     display: none !important;
 }
 
+.ristorante {
+    width: calc(50% - 5px);
+}
+
 .hotel,
 .luogo-enoturismo {
     width: 100%;
