@@ -254,7 +254,7 @@ h1 {
     height: auto;
 }
 
-footer span {
+.footer span {
     font-size: 1rem;
 }
 
@@ -562,7 +562,6 @@ input[type=submit]:hover {
     width: calc(33% - 3px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
     border-radius: var(--border-radius);
@@ -570,17 +569,13 @@ input[type=submit]:hover {
 }
 
 .card img {
-    aspect-ratio: 5/3;
+    aspect-ratio: 3/2;
     width: 100%;
 }
 
 .membro-team img {
     aspect-ratio: 1/1 !important;
     border-radius: var(--border-radius);
-}
-
-.desc-card {
-    margin: auto 0;
 }
 
 .desc-card a {
@@ -645,13 +640,16 @@ textarea {
     display: none !important;
 }
 
-.hotel {
+.hotel,
+.luogo-enoturismo {
     width: 100%;
     flex-direction: row;
+    align-items: center;
     justify-content: left;
 }
 
-.hotel img {
+.hotel img,
+.luogo-enoturismo img {
     width: 33%;
 }
 
@@ -793,7 +791,7 @@ textarea {
     }
 
     /** footer **/
-    footer img {
+    .footer img {
         width: 200px;
     }
 
