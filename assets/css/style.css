@@ -914,4 +914,23 @@ textarea {
     .weatherwidget-io.small {
         display: block !important;
     }
+
+    .hotels,
+    .enoturismo {
+        overflow: hidden;
+    }
+
+    .hotel,
+    .luogo-enoturismo {
+        flex-direction: column;
+    }
+
+    .hotel img,
+    .luogo-enoturismo img {
+        width: 100%;
+    }
+
+    .accordion-item.active .accordion-content {
+        max-height: 750px;
+    }
 }
